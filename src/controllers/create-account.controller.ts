@@ -44,5 +44,7 @@ export class CreateAccountController {
         password: hashedPassword,
       },
     })
+
+    return body
   }
 }
