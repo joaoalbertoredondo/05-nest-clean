@@ -1,5 +1,5 @@
-services: 
-  postgres: 
+services:
+  postgres:
     container_name: nest-clean-pg
     image: postgres
     ports:
