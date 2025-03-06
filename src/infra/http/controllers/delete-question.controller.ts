@@ -1,13 +1,8 @@
-import { z } from 'zod'
-import { ZodValidationPipe } from '../pipes/zod-validation-pipe'
 import {
-  BadRequestException,
-  Body,
-  Controller,
+  BadRequestException, Controller,
   Delete,
   HttpCode,
-  Param,
-  Put,
+  Param
 } from '@nestjs/common'
 import { CurrentUser } from '@/infra/auth/current-user-decorator'
 import { UserPayload } from '@/infra/auth/jwt.strategy'
