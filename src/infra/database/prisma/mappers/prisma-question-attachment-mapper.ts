@@ -1,11 +1,11 @@
-import { UniqueEntityId } from '@/core/entities/unique-entity-id'
+import { Prisma, Attachment as PrismaAttachment } from '@prisma/client'
 import { QuestionAttachment } from '@/domain/forum/enterprise/entities/question-attachment'
-import { Attachment as PrismaAttachment, Prisma } from '@prisma/client'
+import { UniqueEntityId } from '@/core/entities/unique-entity-id'
 
 export class PrismaQuestionAttachmentMapper {
   static toDomain(raw: PrismaAttachment): QuestionAttachment {
     if (!raw.questionId) {
-      throw new Error('Invalid attachment type')
+      throw new Error('Invalid attachment type.')
     }
 
     return QuestionAttachment.create(
@@ -31,7 +31,7 @@ export class PrismaQuestionAttachmentMapper {
         },
       },
       data: {
-        questionId: attachments[0].id.toString(),
+        questionId: attachments[0].questionId.toString(),
       },
     }
   }

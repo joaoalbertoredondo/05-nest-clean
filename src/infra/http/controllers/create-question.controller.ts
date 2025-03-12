@@ -37,9 +37,5 @@ export class CreateQuestionController {
     if (result.isLeft()) {
       throw new BadRequestException()
     }
-
-    return {
-      body,
-    }
   }
 }

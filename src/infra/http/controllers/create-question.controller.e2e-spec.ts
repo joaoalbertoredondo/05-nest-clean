@@ -11,8 +11,8 @@ import { StudentFactory } from 'test/factories/make-student'
 describe('Create question (E2E)', () => {
   let app: INestApplication
   let prisma: PrismaService
-  let studentFactory: StudentFactory
   let attachmentFactory: AttachmentFactory
+  let studentFactory: StudentFactory
   let jwt: JwtService
 
   beforeAll(async () => {
