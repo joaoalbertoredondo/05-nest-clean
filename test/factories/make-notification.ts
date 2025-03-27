@@ -3,6 +3,7 @@ import {
   Notification,
   NotificationProps,
 } from '@/domain/notification/enterprise/entities/notification'
+import { PrismaNotificationMapper } from '@/infra/database/prisma/mappers/prisma-notification-mapper'
 import { PrismaService } from '@/infra/database/prisma/prisma.service'
 import { faker } from '@faker-js/faker'
 import { Injectable } from '@nestjs/common'
